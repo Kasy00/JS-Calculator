@@ -1,0 +1,20 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    background: rgb(135,255,232);
+    background: radial-gradient(circle, rgba(135,255,232,1) 0%, rgba(120,152,246,1) 100%);
+}
+
+.calculator-container{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
