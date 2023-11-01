@@ -5,6 +5,7 @@ const previousScreen = document.querySelector('.previous');
 const currentScreen = document.querySelector('.current');
 const equalsBtn = document.getElementById('equals-button');
 const clearBtn = document.getElementById('clear-button');
+const deleteBtn = document.getElementById('delete-button');
 
 const add = function(a, b){
     return a + b;
@@ -84,8 +85,18 @@ const getResult = function(){
     bNumber = [];
 }
 
+const deleteOne = function(){
+    if(operator.length !== 0){
+        bNumber.pop();
+        currentScreen.textContent = bNumber.join('');
+    }else{
+        aNumber.pop();
+        previousScreen.textContent = aNumber.join('');
+    }
+}
+
 digitsBtns.forEach(button => button.addEventListener("click", () => displayScreen(button)));
 operandsBtns.forEach(button => button.addEventListener("click", () => setOperator(button)));
 clearBtn.addEventListener('click', clearDisplay);
 equalsBtn.addEventListener('click', getResult);
-
+deleteBtn.addEventListener('click', deleteOne);
