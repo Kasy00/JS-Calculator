@@ -78,8 +78,13 @@ body{
     align-items: flex-end;
     justify-content: space-around;
     flex-direction: column;
-    padding: 10px;
+    padding: 1rem;
     word-wrap: break-word;
     word-break: break-all;
     margin-bottom: 1.5rem;
+    border: 2px solid yellowgreen;
+}
+
+.previous, .current{
+    font-size: 1.8rem;
 }
