@@ -54,15 +54,17 @@ const displayScreen = function(button){
 }
 
 const setOperator = function(button){
-    if(button.textContent === '+')
+    if(operator === ''){
+        if(button.textContent === '+')
         operator = '+';
-    else if(button.textContent === '-')
-        operator = '-';
-    else if(button.textContent === '×')
-        operator = '*';
-    else
-        operator = '/';
-    previousScreen.textContent += operator;
+        else if(button.textContent === '-')
+            operator = '-';
+        else if(button.textContent === '×')
+            operator = '*';
+        else
+            operator = '/';
+        previousScreen.textContent += operator;
+    }
 }
 
 const clearDisplay = function(){
