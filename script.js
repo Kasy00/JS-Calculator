@@ -19,7 +19,7 @@ const multiply = function(a, b){
 }
 
 const divide = function(a, b){
-    return b !== 0 ? a / b : alert('Cannot divide by zero!');
+    return b !== 0 ? a / b : previousScreen.textContent = "You cannot divide by zero!";
 }
 
 let aNumber = [],
@@ -76,7 +76,10 @@ const clearDisplay = function(){
 const getResult = function(){
     const result = operate(operator, Number(aNumber.join('')), Number(bNumber.join('')));
     currentScreen.textContent = '';
+    operator = '';
     previousScreen.textContent = result;
+    aNumber = [result];
+    bNumber = [];
 }
 
 digitsBtns.forEach(button => button.addEventListener("click", () => displayScreen(button)));
