@@ -59,6 +59,7 @@ body{
 #equals-button{
     background-color: lightgreen;
     grid-column: span 2;
+    width: 130px;
 }
 
 .operands-button{

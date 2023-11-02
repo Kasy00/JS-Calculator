@@ -6,6 +6,7 @@ const currentScreen = document.querySelector('.current');
 const equalsBtn = document.getElementById('equals-button');
 const clearBtn = document.getElementById('clear-button');
 const deleteBtn = document.getElementById('delete-button');
+const dotBtn = document.getElementById('dot-button');
 
 const add = function(a, b){
     return a + b;
@@ -28,9 +29,6 @@ let aNumber = [],
     operator = '';
 
 const operate = function(operand, firstNumber, secondNumber){
-    console.log(operand);
-    console.log(firstNumber);
-    console.log(secondNumber);
     if(operand === '+')
         return add(firstNumber, secondNumber);
     else if(operand === '-')
@@ -95,8 +93,20 @@ const deleteOne = function(){
     }
 }
 
+const addDecimal = function(){
+    if(!aNumber.includes('.') && operator.length === 0){
+        aNumber.push('.');
+        previousScreen.textContent = aNumber.join('');
+    }
+    else if(!bNumber.includes('.') && operator.length !== 0){
+        bNumber.push('.');
+        currentScreen.textContent = bNumber.join('');
+    }
+}
+
 digitsBtns.forEach(button => button.addEventListener("click", () => displayScreen(button)));
 operandsBtns.forEach(button => button.addEventListener("click", () => setOperator(button)));
 clearBtn.addEventListener('click', clearDisplay);
 equalsBtn.addEventListener('click', getResult);
 deleteBtn.addEventListener('click', deleteOne);
+dotBtn.addEventListener('click', addDecimal);
