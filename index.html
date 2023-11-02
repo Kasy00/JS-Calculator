@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" >
+    <script src="script.js" defer></script>
 </head>
 <body>
     <div class="calculator-container">
@@ -34,6 +35,18 @@
         <button class="digit-button">0</button>
         <button id="dot-button">.</button>
         <button id="equals-button">=</button>
+    </div>
+    <div class="footer">
+        <p>© Copyrights
+            <span id="date"></span>
+            <script>
+                document.getElementById('date').innerHTML = new Date().getFullYear();
+            </script>
+            by Kamil Syktus
+        </p>
+        <a href="https://github.com/Kasy00" target="_blank">
+            <i class="fa fa-github" style="font-size: 3.6rem; color: red;"></i>
+        </a>
     </div>
 </body>
 </html>

@@ -1,6 +1,6 @@
 *, *::before, *::after{
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
     font-weight: bold;
 }
 
@@ -9,7 +9,7 @@ html{
 }
 
 body{
-    padding: 0px;
+    padding: 0;
     margin: 0;
     background: rgb(135,255,232);
     background: radial-gradient(circle, rgba(135,255,232,1) 0%, rgba(120,152,246,1) 100%);
@@ -56,14 +56,18 @@ body{
     transform: scale(0.8);
 }
 
+.operands-button{
+    color: darkgreen;
+}
+
 #equals-button{
     background-color: lightgreen;
     grid-column: span 2;
     width: 130px;
 }
 
-.operands-button{
-    color: darkgreen;
+#delete-button{
+    font-size: 2.5rem;
 }
 
 #clear-button{
@@ -88,4 +92,15 @@ body{
 
 .previous, .current{
     font-size: 1.8rem;
+}
+
+.footer{
+    margin-top: auto;
+    display: flex;
+    min-width: 100vw;
+    border-top: 1px solid  #504141;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    gap: 8px;
 }
